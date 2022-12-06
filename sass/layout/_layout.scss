@@ -89,6 +89,7 @@ body {
          .day-sum {
             display: none;
             position: absolute;
+            z-index: 10;
             bottom: calc(100% + 0.8rem);
             left: 50%;
             transform: translateX(-50%);
