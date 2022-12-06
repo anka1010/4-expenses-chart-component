@@ -42,7 +42,6 @@ async function populateChart() {
             );
 
             currentDiv.style.height = `${currentHeight}px`;
-            console.log(currentHeight);
          });
       });
 }

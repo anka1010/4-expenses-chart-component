@@ -106,7 +106,8 @@ body {
          // OPACITY DIDN'T WORK HERE
          // .day:hover .day-amount {
          .day-amount:hover,
-         .day-amount:active {
+         .day-amount:active,
+         .day-amount:focus {
             background-color: var(--color-primary-red-light);
 
             .day-sum {
@@ -114,7 +115,9 @@ body {
             }
          }
 
-         .day.current .day-amount:hover {
+         .current .day-amount:hover,
+         .current .day-amount:active,
+         .current .day-amount:focus {
             background-color: var(--color-primary-cyan-light);
          }
 
