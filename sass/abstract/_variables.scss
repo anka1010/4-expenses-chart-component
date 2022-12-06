@@ -1,0 +1,23 @@
+// COLORS
+
+:root {
+   --color-primary-red: hsl(10, 79%, 65%);
+   --color-primary-red-light: hsl(10, 65%, 78%);
+   --color-primary-cyan: hsl(186, 34%, 60%);
+   --color-primary-cyan-light: hsl(186, 45%, 82%);
+
+   --color-secondary-dark-brown: hsl(25, 47%, 15%);
+   --color-secondary-medium-brown: hsl(28, 10%, 53%);
+   --color-secondary-cream: hsl(27, 66%, 92%);
+   --color-secondary-pale-orange: hsl(33, 100%, 98%);
+
+   --box-radius: 2rem;
+   --box-radius-mobile: 1.2rem;
+}
+
+// SCRENN SIZES
+
+$breakpoints: (
+   // max width
+   mobile: 600px
+);

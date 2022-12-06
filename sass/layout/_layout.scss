@@ -1,0 +1,138 @@
+body {
+   background-color: var(--color-secondary-cream);
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 100vh;
+}
+
+.chart {
+   width: 54rem;
+
+   @include mobile {
+      margin: 2rem;
+   }
+   // HEADER
+   &-header {
+      display: flex;
+      align-items: center;
+
+      height: 12.5rem;
+      padding: 3rem;
+      border-radius: var(--box-radius);
+      background-color: var(--color-primary-red);
+
+      @include mobile {
+         padding: 2rem;
+         border-radius: var(--box-radius-mobile);
+      }
+
+      &-row {
+         display: flex;
+         justify-content: space-between;
+         width: 100%;
+      }
+
+      &__balance {
+         p {
+            margin-bottom: 1.4rem;
+         }
+      }
+   }
+
+   // CHART DATA
+   &-data {
+      width: 100%;
+      background-color: var(--color-secondary-pale-orange);
+      margin-top: 2.3rem;
+      padding: 4rem;
+      border-radius: var(--box-radius);
+
+      @include mobile {
+         padding-inline: 2rem;
+         border-radius: var(--box-radius-mobile);
+      }
+
+      &__graph {
+         display: flex;
+         justify-content: space-between;
+         column-gap: 1.8rem;
+
+         padding-bottom: 3rem;
+         margin-bottom: 3rem;
+         margin-top: 2rem;
+         border-bottom: 2px solid var(--color-secondary-cream);
+
+         @include mobile {
+            column-gap: 1.2rem;
+         }
+
+         .day {
+            flex: 1 1 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            height: 23rem;
+            cursor: pointer;
+         }
+
+         .day-amount {
+            position: relative;
+            width: 100%;
+            height: 65%;
+            border-radius: 0.5rem;
+            background-color: var(--color-primary-red);
+         }
+
+         .day-sum {
+            display: none;
+            position: absolute;
+            bottom: calc(100% + 0.8rem);
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 1.3rem 0.9rem;
+            border-radius: 0.5rem;
+            background-color: var(--color-secondary-dark-brown);
+            opacity: 1;
+         }
+
+         .day.current .day-amount {
+            background-color: var(--color-primary-cyan);
+         }
+
+         // DISPLAY DAY SUM ON HOVER
+         // OPACITY DIDN'T WORK HERE
+         .day:hover .day-amount {
+            background-color: var(--color-primary-red-light);
+
+            .day-sum {
+               display: block;
+            }
+         }
+
+         .day.current:hover .day-amount {
+            background-color: var(--color-primary-cyan-light);
+         }
+
+         .day .day-name {
+            margin-top: 1rem;
+         }
+      }
+   }
+
+   // CHART FOOTER
+   &-footer {
+      &__total {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         margin-top: 1rem;
+
+         .to-last-month *:first-child {
+            margin-bottom: 0.6rem;
+         }
+      }
+   }
+}

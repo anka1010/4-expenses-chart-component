@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+html {
+   font-size: 62.5%;
+}
+
+* {
+   font-size: 100%;
+   font-family: inherit;
+}
+
+body {
+   font-family: 'DM Sans', sans-serif;
+   font-weight: 400;
+   font-size: 1.8rem;
+   line-height: 1;
+   color: var(--color-secondary-medium-brown);
+
+   @include mobile {
+      font-size: 1.4rem;
+   }
+}
+
+h2 {
+   font-size: 5rem;
+   color: var(--color-secondary-dark-brown);
+
+   @include mobile {
+      font-size: 3rem;
+   }
+}
+
+h3 {
+   font-size: 3.2rem;
+   color: var(--color-secondary-dark-brown);
+
+   @include mobile {
+      font-size: 2.3rem;
+   }
+}
+
+p {
+   font-size: 1.8rem;
+
+   @include mobile {
+      font-size: 1.5rem;
+   }
+}
+
+.chart-header__balance * {
+   color: var(--color-secondary-pale-orange);
+}
+
+.chart-data {
+   .day-sum {
+      font-size: 1.6rem;
+      color: var(--color-secondary-pale-orange);
+   }
+}
+
+.chart-footer {
+   .to-last-month {
+      text-align: right;
+   }
+   span {
+      font-weight: 700;
+      color: var(--color-secondary-dark-brown);
+   }
+}
+
+@include mobile {
+   .day-name {
+      font-size: 1.2rem;
+   }
+}
