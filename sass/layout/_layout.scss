@@ -104,7 +104,9 @@ body {
 
          // DISPLAY DAY SUM ON HOVER
          // OPACITY DIDN'T WORK HERE
-         .day:hover .day-amount {
+         // .day:hover .day-amount {
+         .day-amount:hover,
+         .day-amount:active {
             background-color: var(--color-primary-red-light);
 
             .day-sum {
@@ -112,7 +114,7 @@ body {
             }
          }
 
-         .day.current:hover .day-amount {
+         .day.current .day-amount:hover {
             background-color: var(--color-primary-cyan-light);
          }
 
