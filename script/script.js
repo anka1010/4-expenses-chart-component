@@ -7,7 +7,7 @@ populateChart();
 async function populateChart() {
    chartData.innerHTML = '';
 
-   await fetch('../data/data.json')
+   await fetch('data/data.json')
       .then((res) => res.json())
       .then((data) => {
          // COUNT MAX EXPENSE
