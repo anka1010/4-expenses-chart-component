@@ -7,4 +7,4 @@
 
 [👉 Live preview here](https://anka1010.github.io/4-expenses-chart-component/)
 
-![Preview](./img/preview.jpg)
+![Preview](./img/Preview.jpg)
