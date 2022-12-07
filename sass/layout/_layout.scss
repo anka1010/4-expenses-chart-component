@@ -75,7 +75,6 @@ body {
             justify-content: flex-end;
             align-items: center;
             height: 23rem;
-            cursor: pointer;
          }
 
          .day-amount {
@@ -84,6 +83,7 @@ body {
             height: 65%;
             border-radius: 0.5rem;
             background-color: var(--color-primary-red);
+            cursor: pointer;
          }
 
          .day-sum {
