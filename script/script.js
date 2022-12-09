@@ -1,16 +1,18 @@
 'use strict';
 
+// CHART ELEMENT
 const chartData = document.querySelector('.chart-data__graph');
 
 populateChart();
 
+// RETIREVE DATA AND POPULATE CHART WITH THIS DATA
 async function populateChart() {
    chartData.innerHTML = '';
 
    await fetch('data/data.json')
       .then((res) => res.json())
       .then((data) => {
-         // COUNT MAX EXPENSE
+         // COUNT MAX EXPENSE, TO CALCULATE CHART BARS MAX HEIGHT
          let maxAmount = 0;
          data.forEach((day) => {
             maxAmount = maxAmount < day.amount ? day.amount : maxAmount;
@@ -31,8 +33,8 @@ async function populateChart() {
 
             chartData.appendChild(div);
 
-            // // CALCULATE HEIGHT FOR CURRENT DIV ACCORDING TO MAX EXPENSE
-
+            // CALCULATE HEIGHT FOR CURRENT DIV AFTER ADDING TO DOM,
+            // ACCORDING TO MAX EXPENSE
             const currentDiv = document
                .querySelectorAll('.day .day-amount')
                .item(index);
